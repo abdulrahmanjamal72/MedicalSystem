@@ -14,10 +14,10 @@ This project is collaboratively built by a team of 4 members, with equally distr
 
 | Team Member | Key Responsibilities |
 | :--- | :--- |
-| **[Abdulrahman Jamal]** | Data gathering, cleaning (handling missing values), EDA, and feature engineering to prepare the CSV datasets. |
-| **[Marwan Ayman]** | Building, training, and tuning the multiple machine learning models (Hyperparameter tuning, evaluating accuracy). |
-| **[Hassan Raafat]** | Integrating the models and deploying them using a web framework (e.g., Streamlit) to create the routing system. |
-| **[Abdelbaset Haitham]** | System verification, integration testing (ensuring seamless data flow from UI to models), and presentation slides. |
+| **Abdulrahman Jamal** | Data gathering, cleaning (handling missing values), EDA, and feature engineering to prepare the CSV datasets. |
+| **Marwan Ayman** | Building, training, and tuning the multiple machine learning models (Hyperparameter tuning, evaluating accuracy). |
+| **Hassan Raafat** | Integrating the models and deploying them using a web framework (e.g., Streamlit) to create the routing system. |
+| **Abdelbaset Haitham** | System verification, integration testing (ensuring seamless data flow from UI to models), and presentation slides. |
 
 ## Technologies Used
 * **Data Processing:** Python, Pandas, NumPy
