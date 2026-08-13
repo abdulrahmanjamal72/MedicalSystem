@@ -162,4 +162,4 @@ if st.button("Predict & Route Patient", use_container_width=True):
             
     if all(p < 0.5 for p in predictions.values()):
         st.balloons()
-        st.success("🎉 المريض لا يعاني من أي من هذه الأمراض الثلاثة. (Patient is healthy regarding these conditions)")
+        st.success("(Patient is healthy regarding these conditions❤️)")
