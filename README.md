@@ -1,4 +1,4 @@
-# 🏥 Smart Medical Diagnosis System
+# Smart Medical Diagnosis System
 
 This repository contains an end-to-end machine learning framework that predicts a patient's likelihood of diabetes, hypertension, and heart disease from initial intake data, and routes them to the appropriate specialist. Developed as the final Capstone Project for the NTI Machine Learning Training program.
 
@@ -6,13 +6,13 @@ The system combines a tuned multi-output Random Forest baseline with the TabPFN 
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 **This system is a decision-support and routing aid, not a diagnostic device.** It has not undergone any clinical or regulatory validation. Performance metrics evaluated on this dataset are not evidence of real-world diagnostic accuracy.
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
 1. [Problem Statement & Motivation]
 2. [Dataset & Data Integrity]
@@ -24,7 +24,7 @@ The system combines a tuned multi-output Random Forest baseline with the TabPFN 
 
 ---
 
-## 🚨 Problem Statement & Motivation
+## Problem Statement & Motivation
 
 Global healthcare systems face a significant and well-documented triage inefficiency.
 
@@ -35,7 +35,7 @@ Global healthcare systems face a significant and well-documented triage ineffici
 
 ---
 
-## 📊 Dataset & Data Integrity
+## Dataset & Data Integrity
 
 The project uses the "Data Warehouse Multiclass" dataset, comprising over 280,000 patient records across 39 attributes, including demographic information, vital signs, lab values, and lifestyle indicators.
 
@@ -47,7 +47,7 @@ To ensure absolute methodological rigor:
 
 ---
 
-## ⚙️ System Architecture
+## System Architecture
 
 The production pipeline follows a simple, three-stage architecture: **intake → inference → routing**.
 
@@ -72,7 +72,7 @@ Thresholding -> Specialist Recommendation (Cardiology / Endocrinology / ...)
 
 ---
 
-## 🧠 Methodology & Performance
+## Methodology & Performance
 
 The modeling approach progressed in three phases:
 
@@ -87,7 +87,7 @@ The modeling approach progressed in three phases:
 
 ---
 
-## 💻 Installation & Usage
+## Installation & Usage
 
 The application runs entirely locally with no external API calls.
 
@@ -115,7 +115,7 @@ streamlit run app.py
 
 ---
 
-## 🚀 Future Work
+## Future Work
 
 * Validate the full pipeline on an independent, prospectively collected, non-synthetic clinical dataset.
 * Integrate with hospital Electronic Health Record (EHR) systems via API for direct intake.
@@ -124,7 +124,7 @@ streamlit run app.py
 
 ---
 
-## 👥 Team Members
+## Team Members
 
 This project was developed by a team of four specializing across the pipeline:
 
