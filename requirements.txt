@@ -2,5 +2,6 @@ streamlit
 joblib
 pandas
 numpy
+huggingface-hub
+tabpfn-client
 scikit-learn
-huggingface_hub
