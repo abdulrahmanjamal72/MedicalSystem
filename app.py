@@ -19,26 +19,24 @@ def load_artifacts():
 
 # --- UI Header ---
 st.set_page_config(page_title="AI Medical Routing", layout="wide")
-st.title("🏥 AI Medical Symptom Routing Dashboard")
-st.write("تطبيق ذكاء اصطناعي لتوقع الأمراض وتوجيه المريض للتخصص المناسب.")
+st.title("AI Medical Symptom Routing Dashboard")
 
 # --- Load Models ---
 try:
     models_dict = load_artifacts()['our_models.pkl']
-    st.sidebar.success("تم تحميل النماذج بنجاح! 🚀")
 except Exception as e:
     st.error(f"خطأ في التحميل: {e}")
     st.stop()
 
 # --- Patient Input Form ---
-st.header("بيانات المريض (Patient Data)")
+st.header("Paitient Data")
 
 # Using columns and expanders to make the UI look clean and professional
 col1, col2, col3 = st.columns(3)
 
 with col1:
     st.subheader("Demographics & Vitals")
-    age = st.number_input("Age (سن المريض)", min_value=1, max_value=120, value=45)
+    age = st.number_input("Age", min_value=1, max_value=120, value=45)
     gender = st.selectbox("Gender", ["Male", "Female"])
     bmi = st.number_input("BMI", min_value=10.0, max_value=60.0, value=25.0)
     sleep_hours = st.number_input("Sleep Hours", min_value=0.0, max_value=24.0, value=7.0)
@@ -75,7 +73,7 @@ with col3:
 
 # --- Prediction Logic ---
 st.markdown("---")
-if st.button("Predict & Route Patient (تشخيص وتوجيه المريض)", use_container_width=True):
+if st.button("Predict & Route Patient", use_container_width=True):
     
     # 1. Data Mapping & Encoding (Matching Phase 1 Pipeline)
     gender_mapped = 1 if gender == "Male" else 0
@@ -125,7 +123,7 @@ if st.button("Predict & Route Patient (تشخيص وتوجيه المريض)", u
     df_patient = pd.DataFrame(input_data)
     
     # 3. Make Predictions
-    st.subheader("نتائج التشخيص (Diagnostic Results)")
+    st.subheader("Diagnostics Results")
     targets = ['heart_disease', 'hypertension', 'diabetes']
     
     predictions = {}
@@ -141,26 +139,26 @@ if st.button("Predict & Route Patient (تشخيص وتوجيه المريض)", u
     # Heart Disease
     with c1:
         if predictions['heart_disease'] >= 0.5:
-            st.error(f"⚠️ Heart Disease Detected\nProbability: {predictions['heart_disease']:.1%}")
-            st.info("🩺 Route to: **Cardiology (طبيب قلب)**")
+            st.error(f"Heart Disease Detected\nProbability: {predictions['heart_disease']:.1%}")
+            st.info("Route to: **Cardiology**")
         else:
-            st.success(f"✅ No Heart Disease\nProbability: {predictions['heart_disease']:.1%}")
+            st.success(f"No Heart Disease\nProbability: {predictions['heart_disease']:.1%}")
 
     # Hypertension
     with c2:
         if predictions['hypertension'] >= 0.5:
-            st.error(f"⚠️ Hypertension Detected\nProbability: {predictions['hypertension']:.1%}")
-            st.info("🩺 Route to: **Internal Medicine / Cardiology (باطنة / قلب)**")
+            st.error(f"Hypertension Detected\nProbability: {predictions['hypertension']:.1%}")
+            st.info("Route to: **Internal Medicine / Cardiology**")
         else:
-            st.success(f"✅ No Hypertension\nProbability: {predictions['hypertension']:.1%}")
+            st.success(f"No Hypertension\nProbability: {predictions['hypertension']:.1%}")
 
     # Diabetes
     with c3:
         if predictions['diabetes'] >= 0.5:
-            st.error(f"⚠️ Diabetes Detected\nProbability: {predictions['diabetes']:.1%}")
-            st.info("🩺 Route to: **Endocrinology (طبيب غدد صماء وسكر)**")
+            st.error(f"Diabetes Detected\nProbability: {predictions['diabetes']:.1%}")
+            st.info("Route to: **Endocrinology**")
         else:
-            st.success(f"✅ No Diabetes\nProbability: {predictions['diabetes']:.1%}")
+            st.success(f"No Diabetes\nProbability: {predictions['diabetes']:.1%}")
             
     if all(p < 0.5 for p in predictions.values()):
         st.balloons()
