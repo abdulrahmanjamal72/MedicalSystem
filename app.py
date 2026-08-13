@@ -4,9 +4,9 @@ import pandas as pd
 import numpy as np
 from huggingface_hub import hf_hub_download
 
-# --- إعدادات تحميل النماذج من Hugging Face 
+# --- إعدادات تحميل النماذج من Hugging Face ---
 REPO_ID = "abdulrahmanjamal72/MedicalSystem" 
-ARTIFACTS = ['our_models.pkl', 'tabpfn_models.pkl', 'meta_models.pkl', 'thresholds.pkl']
+ARTIFACTS = ['our_models.pkl', 'meta_models.pkl', 'thresholds.pkl']  # شيلت tabpfn_models.pkl
 
 @st.cache_resource
 def load_artifacts():
