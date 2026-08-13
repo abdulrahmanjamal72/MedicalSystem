@@ -5,7 +5,7 @@ import numpy as np
 from huggingface_hub import hf_hub_download
 
 # --- إعدادات تحميل النماذج من Hugging Face 
-REPO_ID = "abdulrahmanjamal2/Smart-Medical-Diagnosis-System" 
+REPO_ID = "abdulrahmanjamal2/MedicalSystem" 
 ARTIFACTS = ['our_models.pkl', 'tabpfn_models.pkl', 'meta_models.pkl', 'thresholds.pkl']
 
 @st.cache_resource
