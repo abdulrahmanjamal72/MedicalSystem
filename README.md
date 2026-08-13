@@ -14,13 +14,13 @@ The system combines a tuned multi-output Random Forest baseline with the TabPFN 
 
 ## 📖 Table of Contents
 
-1. [Problem Statement & Motivation](https://www.google.com/search?q=%23-problem-statement--motivation)
-2. [Dataset & Data Integrity](https://www.google.com/search?q=%23-dataset--data-integrity)
-3. [System Architecture](https://www.google.com/search?q=%23-system-architecture)
-4. [Methodology & Performance](https://www.google.com/search?q=%23-methodology--performance)
-5. [Installation & Usage](https://www.google.com/search?q=%23-installation--usage)
-6. [Future Work](https://www.google.com/search?q=%23-future-work)
-7. [Team Members](https://www.google.com/search?q=%23-team-members)
+1. [Problem Statement & Motivation]
+2. [Dataset & Data Integrity]
+3. [System Architecture]
+4. [Methodology & Performance]
+5. [Installation & Usage]
+6. [Future Work]
+7. [Team Members]
 
 ---
 
