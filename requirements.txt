@@ -3,5 +3,5 @@ joblib
 pandas
 numpy
 huggingface-hub
-tabpfn-client
 scikit-learn
+tabpfn
